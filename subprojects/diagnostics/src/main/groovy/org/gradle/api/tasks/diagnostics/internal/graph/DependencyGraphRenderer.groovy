@@ -52,7 +52,7 @@ class DependencyGraphRenderer {
 
     private void render(final RenderableDependency node, boolean last, Set<ModuleVersionIdentifier> visited) {
         def children = node.getChildren()
-        def alreadyRendered = !visited.add(node.getId())
+        def alreadyRendered = false
         if (alreadyRendered) {
             hasCyclicDependencies = true
         }
